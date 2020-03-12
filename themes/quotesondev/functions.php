@@ -92,7 +92,8 @@ function red_scripts(){
 		'rest_url' => esc_url_raw(rest_url()),
 		'wpapi_nonce' => wp_create_nonce('wp_rest')
 	));
-	echo "im done bro";
+	echo "im done bro";	echo "(seperator)";
+	echo rest_url();
 
 }
 
