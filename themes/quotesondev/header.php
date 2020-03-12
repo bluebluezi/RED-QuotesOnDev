@@ -7,4 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body <?php body_class();?>>
-<h1><?php bloginfo('name');?></h1>
+<header>
+    <div class="logo-wrapper">
+        <img src="<?php echo get_template_directory_uri() . "/assets/qod-logo.svg";?>">
+    </div>
+</header>
