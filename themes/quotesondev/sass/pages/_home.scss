@@ -2,17 +2,19 @@
     .home-content-container{
         .the-quote{
             margin-bottom:$base-spacing-unit;
+            font-weight:500;
+            font-size:1px;
         }
         .the-author{
             margin-bottom:3rem;
         }
         .random-quote{
-            margin-bottom:4.5rem;
             color:$color-brand-green;
             background-color:$color-main-background;
             border: 1px solid $color-brand-green;
             padding:0.5em $base-spacing-unit;
             border-radius:3px;
+            font-weight:500;
         }
     }
 }

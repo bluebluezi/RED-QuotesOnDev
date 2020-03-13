@@ -59,7 +59,7 @@ html body {
   color: white;
   width: 100vw;
   min-height: 100vh;
-  padding: 2vw;
+  padding: 3vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden; }
@@ -72,6 +72,11 @@ html body {
     color: #ffffff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
+  html body section:first-of-type {
+    margin-bottom: 4.5rem; }
+  html body a {
+    text-decoration: none;
+    color: #00cc00; }
 
 @font-face {
   font-family: 'Exo Web';
@@ -163,15 +168,28 @@ footer {
       line-height: 1; }
 
 .home-content .home-content-container .the-quote {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 1px; }
 
 .home-content .home-content-container .the-author {
   margin-bottom: 3rem; }
 
 .home-content .home-content-container .random-quote {
-  margin-bottom: 4.5rem;
   color: #00cc00;
   background-color: #222222;
   border: 1px solid #00cc00;
   padding: 0.5em 1.5rem;
-  border-radius: 3px; }
+  border-radius: 3px;
+  font-weight: 500; }
+
+.about-content {
+  width: 100%; }
+  .about-content .about-content-container h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem; }
+  .about-content .about-content-container p {
+    font-size: 0.75rem; }
+    .about-content .about-content-container p a {
+      font-size: 1em; }
