@@ -1,0 +1,17 @@
+.about-content{
+    width:100%;
+    .about-content-container{
+        h2{
+            font-size:1.5rem;
+            font-weight:500;
+            margin-bottom:$base-spacing-unit;
+        }
+        
+        p{
+            font-size:0.75rem;
+            a{
+                font-size:1em;
+            }   
+        }
+    }
+}
