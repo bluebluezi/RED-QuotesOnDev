@@ -1,0 +1,16 @@
+header{
+    width:100%;
+    .logo-wrapper{
+        box-sizing:content-box;
+        width:100%;
+        height:100%;
+        padding:3em 0;
+        a{
+            width:75%;
+            img{
+                width:75%;
+                height:auto;
+            }
+        }
+    }
+}
