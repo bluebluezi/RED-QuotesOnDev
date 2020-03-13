@@ -49,16 +49,19 @@ table {
 
 
 //////////////////////////////my resets/////////////////////////////////
-body{
-	background-color:$color-main-background;
-	color:white;
-	width:100vw;
-	padding: 2vw;
-	box-sizing:border-box;
-	overflow:hidden;
-	*{
-		@include base-font;
+html{
+	body{
+		background-color:$color-main-background;
+		color:white;
+		width:100vw;
+		min-height:100vh;
+		padding: 2vw;
 		box-sizing:border-box;
+		overflow-x:hidden;
+		*{
+			@include base-font;
+			box-sizing:border-box;
+		}
 	}
 }
 

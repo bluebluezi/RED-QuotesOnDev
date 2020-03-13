@@ -83,7 +83,6 @@ require get_template_directory() . '/inc/metaboxes.php';
  */
 require get_template_directory() . '/inc/api.php';
 
-
 function red_scripts(){
 	$script_url = get_template_directory_uri() . '/js/api.js';
 	wp_enqueue_script('jquery');
@@ -92,9 +91,6 @@ function red_scripts(){
 		'rest_url' => esc_url_raw(rest_url()),
 		'wpapi_nonce' => wp_create_nonce('wp_rest')
 	));
-	echo "im done bro";	echo "(seperator)";
-	echo rest_url();
-
 }
 
 add_action('wp_enqueue_scripts', 'red_scripts');
