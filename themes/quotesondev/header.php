@@ -9,6 +9,8 @@
 <body <?php body_class();?>>
 <header>
     <div class="logo-wrapper">
-        <img src="<?php echo get_template_directory_uri() . "/assets/qod-logo.svg";?>">
+        <a href ="<?php echo get_home_url();?>">
+            <img src="<?php echo get_template_directory_uri() . "/assets/qod-logo.svg";?>">
+        </a>
     </div>
 </header>
