@@ -3,7 +3,7 @@
 
     $(function () {
 
-        $('.randomQuote').on('click', function (e) {
+        $('.random-quote').on('click', function (e) {
             console.log(`this is the rest_url property: ${red_vars.rest_url}`);
             e.preventDefault();
             $.ajax({
@@ -29,8 +29,6 @@
 
         //$('.submitQuote).on('click), function(e){
 
-    }
-
     });
 
-}) (jQuery);
+})(jQuery);
