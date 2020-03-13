@@ -95,4 +95,31 @@ function red_scripts(){
 
 add_action('wp_enqueue_scripts', 'red_scripts');
 
+
+function qod_widgets(){
+    register_sidebar(array(   //this is an associative array
+        'name' => 'Archive',
+        'id' => 'archive-sidebar-area',
+        'description' => 'Add a text block with your business hours',
+        'before_widget' => '<aside class="%1$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class = "archive-headings">',
+        'after_title' => '</h3>'
+    ));
+
+    // register_sidebar(array(
+    //     'name' => 'Footer',
+    //     'id' => 'footer-area',
+    //     'description' => 'Drag and drop appropriate widgets for the footer',
+    //     'before_widget' => '<div class="%1$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h2 class = "footer-headings">',
+    //     'after_title' => '</h2>'
+    // ));
+
+}
+
+add_action('widgets_init', 'qod_widgets');
+
+
 ?>
