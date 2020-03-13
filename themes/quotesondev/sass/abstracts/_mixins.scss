@@ -1,0 +1,8 @@
+@mixin base-font{
+    font-family:$primary-font-family,Arial,sans-serif;
+    font-size:$base-font-size;
+    font-weight:300;
+    font-style:normal;
+    color:#ffffff;
+    @content;
+}
