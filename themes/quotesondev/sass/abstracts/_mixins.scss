@@ -3,6 +3,7 @@
     font-size:$base-font-size;
     font-weight:300;
     font-style:normal;
+    line-height:$base-line-height;
     color:#ffffff;
     @content;
 }
