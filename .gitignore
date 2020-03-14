@@ -12,6 +12,13 @@ plugins/*
 # Ignore everything in "themes" except the active theme. #
 themes/*
 !themes/quotesondev/
+
+# Ignore specific stuff
+themes/quotesondev/desktop
+themes/quotesondev/mobile
+themes/quotesondev/tablet
+
+
 # Ignore packages #
 themes/quotesondev/node_modules/
 
