@@ -2,10 +2,10 @@
     
     <?php
         $args = array( 
-            'post_type' => 'post', 
-            'order' => 'ASC',
-            'orderby' => 'rand',
-            'numberposts' => 1
+            'post_type'      => 'post', 
+            'order'          => 'ASC',
+            'orderby'        => 'rand',
+            'posts_per_page' => 1
             );
         $quote_post = get_posts( $args ); 
     ?> <!-- returns an array of posts-->
@@ -23,7 +23,7 @@
             </p>
             <button class = "random-quote">Show Me Another!</button>
 
-            <?php endforeach;?>
+            <?php endforeach; wp_reset_postdata();?>
 
         </div>
     </section>

@@ -186,10 +186,44 @@ footer {
 .about-content {
   width: 100%; }
   .about-content .about-content-container h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 500;
     margin-bottom: 1.5rem; }
   .about-content .about-content-container p {
     font-size: 0.75rem; }
     .about-content .about-content-container p a {
       font-size: 1em; }
+
+.archive-content {
+  width: 100%; }
+  .archive-content .archive-content-container h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem; }
+  .archive-content .archive-content-container a {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding-right: 1em;
+    letter-spacing: 0.05em; }
+  .archive-content .archive-content-container .archive-headings {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem; }
+  .archive-content .archive-content-container .quote-authors-container {
+    margin-bottom: 1.5rem; }
+  .archive-content .archive-content-container aside {
+    margin-bottom: 1.5rem; }
+  .archive-content .archive-content-container .categories-3 ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .archive-content .archive-content-container .tag_cloud-2 .tagcloud .tag-cloud-link {
+    font-size: 0.75rem !important; }
