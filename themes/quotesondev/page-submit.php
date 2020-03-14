@@ -1,7 +1,8 @@
 
 
 <?php get_header(); ?>
-
+    
+<?php if ( is_user_logged_in() ):?>
     <section class = "submit">
     <div class = "submit-content-container">
         <h2><?php the_title();?></h2>
@@ -32,6 +33,20 @@
 
         </form>
 
+    </div>
+    </section>
+
+<?php else : ?>
+
+    <section class = "submit">
+    <div class = "submit-content-container">
+        <h2><?php the_title();?></h2>
+        <p>Sorry, you must be logged in to submit a quote!</p>
+        <a href= "<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>" 
+            alt="<?php esc_attr_e( 'Login', 'textdomain' ); ?>">
+            
+        <?php _e( 'Click here to log in.', 'textdomain' ); ?>
+        </a>
     </div>
     </section>
 
