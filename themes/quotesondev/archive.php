@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 
 <section class = "archive-content">
-    <div class = "archive-content-area">
+    <div class = "archive-content-container">
         <h2><?php the_title(); ?></h2>
 
         <?php 
@@ -24,7 +24,7 @@
                 <a href="<?php the_permalink();?>">  <?php the_title();?>  </a>
             
                 <?php endwhile; ?>
-                
+
             </div>
                     <?php wp_reset_postdata(); ?>
 

@@ -1,0 +1,48 @@
+.archive-content{
+    width:100%;
+    
+    .archive-content-container{
+
+        h2{
+            font-size:1.75rem;
+            font-weight:500;
+            margin-bottom:$base-spacing-unit;
+        }
+
+        a{
+            display:inline-block;
+            font-size:0.75rem;
+            padding-right: 1em;
+            letter-spacing:0.05em;
+        }
+
+        .archive-headings{
+            font-size:1.25rem;
+            font-weight:500;
+            margin-bottom:1rem;
+        }
+        .quote-authors-container{
+            margin-bottom:$base-spacing-unit;
+        }
+        aside{
+            margin-bottom:$base-spacing-unit;
+        }
+
+        .categories-3{
+            ul{
+                width:100%;
+                display:flex;
+                flex-flow:row wrap;
+                justify-content:flex-start;
+            }
+        }
+
+        .tag_cloud-2{
+            .tagcloud{
+                .tag-cloud-link{
+                    font-size:0.75rem !important;
+                }
+            }
+        }
+    }
+}
