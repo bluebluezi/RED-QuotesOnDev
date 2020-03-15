@@ -7,7 +7,7 @@
     <div class = "submit-content-container">
         <h2><?php the_title();?></h2>
 
-        <form> <!--maybe add action =/submit-result.php-->
+        <form id="submit-quote-form"> <!--maybe add action =/submit-result.php-->
             
             <label for="input-author">
                 Author of Quote
@@ -49,5 +49,6 @@
         </a>
     </div>
     </section>
+<?php endif;?>
 
 <?php get_footer();?>
