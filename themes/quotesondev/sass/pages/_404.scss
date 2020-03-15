@@ -29,7 +29,10 @@
                 font-size:0.75rem;
                 font-weight:500;
                 padding: 0.5em 0.5em;
+
+                &::placeholder{
                 text-transform:uppercase;
+                }
             }
 
             .search-submit{
