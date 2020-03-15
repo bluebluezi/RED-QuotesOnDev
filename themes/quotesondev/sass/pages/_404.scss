@@ -1,0 +1,47 @@
+.not-found{
+    width:100%;
+
+    .not-found-content-container{
+        width:100%;
+
+        h2{
+            font-size:1.75rem;
+            font-weight:500;
+            margin-bottom:$base-spacing-unit;
+        }
+
+        p{
+            font-size:0.75rem;
+            margin-bottom:$base-spacing-unit;
+        }
+
+        .search-container{
+
+            form{
+                box-sizing:content-box;
+            }
+
+            .search-field{
+                background-color: $color-main-background;
+                border:1px solid $color-brand-green;
+                border-radius:$border-radius;
+                width:70%;
+                font-size:0.75rem;
+                font-weight:500;
+                padding: 0.5em 0.5em;
+                text-transform:uppercase;
+            }
+
+            .search-submit{
+                background-color: $color-main-background;
+                border:0;
+
+                *{
+                    color:$color-brand-green;
+                }
+            }
+
+        }
+
+    }
+}

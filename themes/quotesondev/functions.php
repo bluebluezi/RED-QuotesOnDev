@@ -89,7 +89,7 @@ function red_scripts(){
 	wp_enqueue_script('red_comments', $script_url, array ('jquery'), false, true);
 	wp_localize_script('red_comments','red_vars',array(
 		'rest_url' => esc_url_raw(rest_url()),
-		'wpapi_nonce' => wp_create_nonce('wp_rest')
+		'wpapi_nonce' => wp_create_nonce('wp_rest') //create nonce through REST_API
 	));
 }
 
@@ -121,5 +121,13 @@ function qod_widgets(){
 
 add_action('widgets_init', 'qod_widgets');
 
+
+
+//favicon functionality
+function tthq_add_custom_fa_css() {
+wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
+}
+
+add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
 
 ?>
