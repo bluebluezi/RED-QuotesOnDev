@@ -132,9 +132,21 @@ add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
 
 //limit posts_per_page for different queries
 function qod_search_posts_per_page($query) {
-    if ( $query->is_search ) {
+	//condition for frontpage/ blogindex page is handled
+	// in home.php in the actual $arg for new WP_Query object
+	
+	if ( $query->is_search() ) {
         $query->set( 'posts_per_page', '10' );
-    }
+	}
+	else if ($query -> is_category() ||
+		     $query -> is_tag()){
+		$query -> set('posts_per_page','5');
+	}
+	else if ($query -> is_author()){
+		$query -> set('posts_per_page','1');
+		$query -> set('orderby','rand');
+	}
+	
     return $query;
 }
 add_filter( 'pre_get_posts','qod_search_posts_per_page' );
