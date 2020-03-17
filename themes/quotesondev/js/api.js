@@ -9,8 +9,8 @@
     $(function () {
 
         $('.random-quote').on('click', function (e) {
-            console.log(red_vars);
-            console.log(`this is the rest_url property: ${red_vars.rest_url}`);
+            // console.log(red_vars);
+            // console.log(`this is the rest_url property: ${red_vars.rest_url}`);
             e.preventDefault();
             $.ajax({
 
@@ -21,22 +21,39 @@
 
             })
                 .done(function (data) {
-                    console.log(data); //one way to display data;
+                    // console.log(data); //one way to display data;
+                    const authorText = $(".the-author")[0];
+                    // console.log($(authorText));
+                    $(authorText).empty();
 
                     data.forEach(quote => { //quote is the key we created for each data array element
-                        console.log(quote);
-                        console.log('title:' + quote.title.rendered);
+                        // console.log(quote);
+                        // console.log('title:' + quote.title.rendered);
 
-                        console.log($(".the-author"));
-                        $(".the-author")[0].innerHTML = quote.title.rendered;
-                        $(".the-quote")[0].innerHTML = quote.content.rendered;
+                        // console.log($(".the-author"));
+                        authorText.innerHTML = '&mdash; ' + quote.title.rendered;
+                        $(".the-quote").innerHTML = quote.content.rendered;
+                        console.log(quote._qod_quote_source);
+
+                        if (quote._qod_quote_source && quote._qod_quote_source_url) {
+
+                            $(".the-author").append(`, <a href = "${quote._qod_quote_source_url}">${quote._qod_quote_source}</a></span>`);
+                        }
+                        else if (quote._qod_quote_source) {
+                            authorText.append(`${quote._qod_quote_source}`);
+                        }
+
+
+
+
+
                     });
 
                     const urlRaw = data[data.length - 1].link;
                     console.log(urlRaw);
                     const urlAmended = urlRaw.replace('t:8888', 't:3000');
 
-                    history.replaceState(null, '', urlAmended); //History_API
+                    history.pushState(null, '', urlAmended); //History_API
                     console.log("replaced");
 
                 });
@@ -81,9 +98,6 @@
                     alert('Hmmm something went wrong...failed to submit.')
                 })
         });
-
-        //$('.submit-quote-button).on('click), function(e){
-        // e.preventDefault();
 
     });
 

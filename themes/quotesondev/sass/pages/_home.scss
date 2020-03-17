@@ -13,7 +13,7 @@
             background-color:$color-main-background;
             border: 1px solid $color-brand-green;
             padding:0.5em $base-spacing-unit;
-            border-radius:3px;
+            border-radius:$border-radius;
             font-weight:500;
         }
     }
