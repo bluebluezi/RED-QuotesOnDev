@@ -1,5 +1,6 @@
 <?php
 /* Template Name: Archive Page */
+//this allows pages on wp admin dashboard to be assigned to this template
 ?>
 
 <?php get_header(); ?>
@@ -12,7 +13,7 @@
             $args = array(
                         'post_type' => 'post',
                             'order' => 'DSC',
-                'posts_per_page' => -1, //-1 specifies all posts
+                   'posts_per_page' => -1, //-1 specifies all posts
             );
             
             $quotes = new WP_Query( $args );?>
@@ -23,17 +24,20 @@
 
                 <a href="<?php the_permalink();?>">  <?php the_title();?>  </a>
             
-                <?php endwhile; ?>
+                <?php endwhile; 
+                      wp_reset_postdata(); 
+                ?>
 
             </div>
-                    <?php wp_reset_postdata(); ?>
+                    
 
                 <?php else : ?>
             
                     <h2>Nothing found!</h2>
 
                 <?php endif; ?>
-
+        <!--instead of get_sidebar, could use wp_list_categories & get_tags 
+        following example on https://developer.wordpress.org/reference/functions/get_tags/-->
         <?php get_sidebar('archive');?>
     
     </div>

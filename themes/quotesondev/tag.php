@@ -23,7 +23,6 @@
         
         <?php 
             if( $tagPosts->have_posts() ) :
-        //The WordPress Loop: loads post content 
             while($tagPosts->have_posts() ) :
             $tagPosts -> the_post();
         ?>
@@ -33,6 +32,8 @@
                 </h2>
                 <p>
                     &mdash; <?php echo $post -> post_title;?>
+                    
+                        <!-- conditional rendernig related to existence of quote source and/or its url-->
                     <?php 
 
                         $fieldUrl = get_post_meta(get_the_ID(),'_qod_quote_source_url',true);

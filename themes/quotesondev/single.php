@@ -4,15 +4,16 @@
     <div class="home-content-container">
 
 <?php if( have_posts() ) :
-//The WordPress Loop: loads post content 
-    while( have_posts() ) :
-        the_post(); ?>
+    while( have_posts() ) : the_post();
+?>
     
     <h2 class="the-quote">
         <?php echo $post -> post_content;?>
     </h2>
     <p class="the-author">
-                &mdash; <?php echo $post -> post_title;?>
+
+                &mdash; <?php echo $post -> post_title;?> <!--shows - AuthorName-->
+                
                 <?php 
                 
                     $fieldUrl = get_post_meta(get_the_ID(),'_qod_quote_source_url',true);
@@ -31,20 +32,18 @@
                     }
                 ;?>
              
-            </p>
-            <button class = "random-quote">Show Me Another!</button>
+    </p>
+    <button class = "random-quote">Show Me Another!</button>
 
-    
-    <!-- Loop ends -->
     <?php endwhile;?>
 
-
 <?php else : ?>
+
         <p>No posts found</p>
+        
 <?php endif;?>
 
     </div>
 </section>
 
-    
 <?php get_footer();?>

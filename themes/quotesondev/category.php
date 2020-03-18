@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<!--loading up new WP_Query object-->
 <?php
     $category = get_the_category();
     $categorySlug = $category[0]->slug;
@@ -16,31 +17,26 @@
     $categoryposts = new WP_Query($args);
 ?>
 
-
 <section class="category-content">
         <div class="category-content-container">  
+            <p>
+                <?php   echo 'Category: ' . $category[0]->name;?>
+            </p>
 
-        <p><?php echo 'Category: ' . $category[0]->name;?></p>
+            <?php if ( $categoryposts->have_posts() ) :
+                    while ($categoryposts->have_posts() ) : $categoryposts -> the_post()
+            ;?>
+                        <?php the_content(); ?>
 
-            <?php if( $categoryposts->have_posts() ) :
-            //The WordPress Loop: loads post content 
-                while($categoryposts->have_posts() ) :
-                    $categoryposts -> the_post();?>
-    
-                    <?php the_content(); ?>
+                        <h2>
+                            <?php echo '&mdash;' . the_title();?>
+                        </h2>
 
-                    <h2><?php echo '&mdash; ';?>
-                        <?php the_title(); ?>
-                    </h2>
-
-                    
-                <!-- Loop ends -->
-                <?php endwhile;?>
-                <?php 
+            <?php   endwhile;
+                
                 qod_numbered_pagination();
-                // the_posts_navigation();
-                ?>
-                <?php wp_reset_postdata();?>
+                 wp_reset_postdata();
+            ;?>
 
             <?php else : ?>
                     <p>No posts found</p>

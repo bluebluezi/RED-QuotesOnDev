@@ -2,6 +2,7 @@
 
 <?php get_header(); ?>
 
+<p>Random Quote submitted by: <?php echo get_the_author();?> </p>
 <?php if( have_posts() ) :
 //The WordPress Loop: loads post content 
     while( have_posts() ) :
@@ -12,8 +13,6 @@
     
     <!-- Loop ends -->
     <?php endwhile;?>
-
-    <?php the_posts_navigation();?>
 
 <?php else : ?>
         <p>No posts found</p>

@@ -7,6 +7,10 @@
             margin-bottom:$base-spacing-unit;
         }
         
+        &>p:first-of-type{
+            margin-bottom:$base-spacing-unit;
+        }
+
         p{
             font-size:0.75rem;
             a{

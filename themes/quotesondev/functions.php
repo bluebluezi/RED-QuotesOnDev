@@ -95,9 +95,9 @@ function red_scripts(){
 
 add_action('wp_enqueue_scripts', 'red_scripts');
 
-
+//used sidebar to populate the archive page
 function qod_widgets(){
-    register_sidebar(array(   //this is an associative array
+    register_sidebar(array(
         'name' => 'Archive',
         'id' => 'archive-sidebar-area',
         'description' => 'Add a text block with your business hours',
@@ -106,17 +106,6 @@ function qod_widgets(){
         'before_title' => '<h3 class = "archive-headings">',
         'after_title' => '</h3>'
     ));
-
-    // register_sidebar(array(
-    //     'name' => 'Footer',
-    //     'id' => 'footer-area',
-    //     'description' => 'Drag and drop appropriate widgets for the footer',
-    //     'before_widget' => '<div class="%1$s">',
-    //     'after_widget' => '</div>',
-    //     'before_title' => '<h2 class = "footer-headings">',
-    //     'after_title' => '</h2>'
-    // ));
-
 }
 
 add_action('widgets_init', 'qod_widgets');
@@ -132,8 +121,8 @@ add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
 
 //limit posts_per_page for different queries
 function qod_search_posts_per_page($query) {
-	//condition for frontpage/ blogindex page is handled
-	// in home.php in the actual $arg for new WP_Query object
+	//more conditions for template pages are handled in their respective
+	//pages locally
 	
 	if ( $query->is_search() ) {
         $query->set( 'posts_per_page', '10' );
