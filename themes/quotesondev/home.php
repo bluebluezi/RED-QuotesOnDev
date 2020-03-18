@@ -13,8 +13,9 @@
 <section class="home-content">
     <div class="home-content-container">   
 
-    <?php if ( $categoryposts->have_posts() ) :
-            foreach ($quote_post as $post): setup_postdata( $post );?>
+    <?php if ( !empty($quote_post)) :
+            foreach ($quote_post as $post): setup_postdata( $post )
+    ;?>
 
                 <h1 class="the-quote">
                     <?php echo $post -> post_content;?>
@@ -46,6 +47,9 @@
             <?php endforeach;
                 wp_reset_postdata();
             ?>
+    <?php else : ?>
+                <p>No posts found</p>
+    <?php endif;?>
 
     </div>
 </section>
