@@ -2,16 +2,26 @@
     width:100%;
     
     .archive-content-container{
-
+        & *{
+            @include tablet{
+                line-height: 2;
+            }
+        }
         h2{
             font-size:1.75rem;
             font-weight:500;
             margin-bottom:$base-spacing-unit;
+            @include tablet{
+                font-size: 4.5vmin;
+            }
         }
 
         a{
             display:inline-block;
             font-size:0.75rem;
+            @include tablet{
+                font-size:2.5vmin;
+            }
             padding-right: 1em;
             letter-spacing:0.05em;
         }
@@ -20,6 +30,9 @@
             font-size:1.25rem;
             font-weight:500;
             margin-bottom:1rem;
+            @include tablet{
+                font-size:3.5vmin;
+            }
         }
         .quote-authors-container{
             margin-bottom:$base-spacing-unit;
@@ -41,6 +54,9 @@
             .tagcloud{
                 .tag-cloud-link{
                     font-size:0.75rem !important;
+                    @include tablet{
+                        font-size:2.5vmin !important;
+                    }
                 }
             }
         }

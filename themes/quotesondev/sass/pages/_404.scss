@@ -8,11 +8,18 @@
             font-size:1.75rem;
             font-weight:500;
             margin-bottom:$base-spacing-unit;
+            @include tablet{
+                font-size: 4.5vmin;
+            }
         }
 
         p{
             font-size:0.75rem;
             margin-bottom:$base-spacing-unit;
+            @include tablet{
+                font-size: 2.25vmin;
+                font-weight:500;
+            }
         }
 
         .search-container{
@@ -29,6 +36,11 @@
                 font-size:0.75rem;
                 font-weight:500;
                 padding: 0.5em 0.5em;
+                @include tablet{
+                    font-size: 3vmin;
+                    border: 3px solid $color-brand-green;
+                    width:40%;
+                }
 
                 &::placeholder{
                 text-transform:uppercase;
@@ -38,10 +50,17 @@
             .search-submit{
                 background-color: $color-main-background;
                 border:0;
+                @include tablet{
+                    .fa{
+                    font-size: 2.5vmin;
+                    }
+                }
 
                 *{
                     color:$color-brand-green;
                 }
+
+
             }
 
         }

@@ -2,7 +2,7 @@
 <section class = "search-results-content">
     <div class = search-results-content-container>
         <p>
-            Search Results for:<br>
+            Search Results for:
             <?php echo esc_html(get_search_query(false));?>
         </p>
 

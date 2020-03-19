@@ -28,11 +28,13 @@
 
                     data.forEach(quote => { //quote is the key we created for each data array element
                         // console.log(quote);
-                        // console.log('title:' + quote.title.rendered);
+                        console.log('title:' + quote.title.rendered);
+                        console.log('content: ' + quote.content.rendered);
+                        console.log($(".the-quote"));
 
                         // console.log($(".the-author"));
                         authorText.innerHTML = '&mdash; ' + quote.title.rendered;
-                        $(".the-quote").innerHTML = quote.content.rendered;
+                        $(".the-quote")[0].innerHTML = quote.content.rendered;
                         console.log(quote._qod_quote_source);
 
                         if (quote._qod_quote_source && quote._qod_quote_source_url) {
@@ -40,22 +42,16 @@
                             $(".the-author").append(`, <a href = "${quote._qod_quote_source_url}">${quote._qod_quote_source}</a></span>`);
                         }
                         else if (quote._qod_quote_source) {
-                            authorText.append(`${quote._qod_quote_source}`);
+                            $(".the-author").append(`, ${quote._qod_quote_source}`);
                         }
-
-
-
-
 
                     });
 
                     const urlRaw = data[data.length - 1].link;
-                    console.log(urlRaw);
+                    // console.log(urlRaw);
                     const urlAmended = urlRaw.replace('t:8888', 't:3000');
-
                     history.pushState(null, '', urlAmended); //History_API
-                    console.log("replaced");
-
+                    // console.log("replaced");
                 });
 
         });

@@ -12,7 +12,8 @@
         <?php 
             $args = array(
                         'post_type' => 'post',
-                            'order' => 'DSC',
+                            'order' => 'ASC',
+                          'orderby' => 'title',
                    'posts_per_page' => -1, //-1 specifies all posts
             );
             

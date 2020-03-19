@@ -5,6 +5,9 @@
             font-size:1.5rem;
             font-weight:500;
             margin-bottom:$base-spacing-unit;
+            @include tablet{
+                font-size: 4.5vmin;
+            }
         }
         
         h2:first-of-type{
@@ -17,6 +20,9 @@
             font-size:0.75rem;
             font-weight:500;
             margin-bottom:$base-spacing-unit;
+            @include tablet{
+                font-size: 2.25vmin;
+            }
         }
 
         h2{
@@ -24,6 +30,9 @@
             a{
             font-size:1.25rem;
             font-weight:500;
+            @include tablet{
+                font-size: 3.25vmin;
+            }
             }
         }
 
@@ -33,6 +42,9 @@
                 padding-right: 0.5em;
                 font-size:0.75rem;
                 font-weight:500;
+                @include tablet{
+                    font-size: 2.5vmin;
+                }
             }
         }
     }

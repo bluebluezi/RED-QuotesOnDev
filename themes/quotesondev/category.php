@@ -29,7 +29,8 @@
                         <?php the_content(); ?>
 
                         <h2>
-                            <?php echo '&mdash;' . the_title();?>
+                            <?php echo '&mdash; '?>
+                            <?php the_title();?>
                         </h2>
 
             <?php   endwhile;

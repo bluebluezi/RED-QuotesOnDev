@@ -7,6 +7,9 @@
             font-size:1.75rem;
             font-weight:500;
             margin-bottom:$base-spacing-unit; 
+            @include tablet{
+                font-size: 4.5vmin;
+            }
         }
         form{
             label{
@@ -14,6 +17,9 @@
                 font-size:0.75rem;
                 font-weight:500;
                 margin-bottom:1em;
+                @include tablet{
+                    font-size: 2.5vmin;
+                }
 
             }
             input{
@@ -24,6 +30,12 @@
                 margin-bottom:1rem; 
                 border: 1.5px solid $color-brand-green;
                 border-radius: $border-radius;
+                @include tablet{
+                    border: 3px solid $color-brand-green;
+                    font-size: 2.5vmin;
+                    padding: 0.5em 0;
+                    margin-bottom:2rem;
+                }
             }
 
             &>input:last-child{
@@ -33,6 +45,10 @@
                 font-weight:500;
                 width:45%;
                 margin-bottom:0;
+                @include tablet{
+                    font-size: 2.5vmin;
+                    padding: 0.5em 0.25em;
+                }
             }
 
             textarea{
@@ -45,6 +61,10 @@
                 margin-bottom:1rem; 
                 border:1.5px solid $color-brand-green;
                 border-radius:$border-radius;
+                @include tablet{
+                    height:10em;
+                    border: 3px solid $color-brand-green;
+                }
             }
         }
 
@@ -54,6 +74,9 @@
         p{
             font-size:0.75rem;
             margin-bottom:$base-spacing-unit;
+            @include tablet{
+                font-size: 2.5vmin;
+            }
         }  
     }
 }

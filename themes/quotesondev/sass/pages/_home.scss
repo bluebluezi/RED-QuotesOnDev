@@ -2,11 +2,27 @@
     .home-content-container{
         .the-quote{
             margin-bottom:$base-spacing-unit;
-            font-weight:500;
-            font-size:1px;
+
+            &>p{
+                font-weight:500;
+                font-size:1rem;
+                @include tablet{
+                    font-size: 4vmin;
+                }
+            }
+      
         }
         .the-author{
             margin-bottom:3rem;
+            @include tablet{
+                font-size: 4vmin;
+            }
+
+            &>*{
+                @include tablet{
+                    font-size: 4vmin;
+                }
+            }
         }
         .random-quote{
             color:$color-brand-green;
@@ -15,6 +31,11 @@
             padding:0.5em $base-spacing-unit;
             border-radius:$border-radius;
             font-weight:500;
+            @include tablet{
+                padding: 0.5em 1.75em;
+                font-size: 3vmin;
+                border: 3px solid $color-brand-green;
+            }
         }
     }
 }

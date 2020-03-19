@@ -7,3 +7,15 @@
     color:#ffffff;
     @content;
 }
+
+@mixin tablet{
+	@media(min-width: $tablet-min-width){
+		@content; // <--this line is required
+	}
+}
+
+@mixin desktop{
+	@media(min-width: $desktop-min-width){
+		@content; // <--this line is required
+	}
+}

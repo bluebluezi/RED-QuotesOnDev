@@ -64,6 +64,9 @@ html{
 		}
 		section:first-of-type{
 			margin-bottom:4.5rem;
+			@include tablet{
+                margin-bottom:7.5rem;
+            }
 		}
 		a{
 			text-decoration:none;

@@ -74,6 +74,9 @@ html body {
             box-sizing: border-box; }
   html body section:first-of-type {
     margin-bottom: 4.5rem; }
+    @media (min-width: 600px) {
+      html body section:first-of-type {
+        margin-bottom: 7.5rem; } }
   html body a {
     text-decoration: none;
     color: #00cc00; }
@@ -114,6 +117,9 @@ header {
     width: 100%;
     height: 100%;
     padding: 3em 0; }
+    @media (min-width: 600px) {
+      header .logo-wrapper {
+        padding: 2em 0; } }
     header .logo-wrapper a {
       width: 75%; }
       header .logo-wrapper a img {
@@ -131,12 +137,31 @@ footer {
           flex-flow: column nowrap;
   font-size: 4.5vmin;
   margin-bottom: 3em; }
+  @media (min-width: 600px) {
+    footer {
+      font-size: 0.75rem;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
   footer .main-menu {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 1.5rem; }
+    @media (min-width: 600px) {
+      footer .main-menu {
+        display: inline;
+        width: auto;
+        margin-bottom: 0; } }
     footer .main-menu .menu-main-menu-container {
       width: 100%; }
       footer .main-menu .menu-main-menu-container #menu-main-menu {
-        width: 100%;
+        width: auto;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -150,30 +175,61 @@ footer {
         footer .main-menu .menu-main-menu-container #menu-main-menu li {
           padding-right: 3vw;
           border-right: 1px solid #ffffff;
-          line-height: 1; }
+          line-height: 1;
+          display: inline; }
           footer .main-menu .menu-main-menu-container #menu-main-menu li a {
             font-size: 4.5vmin;
             text-decoration: none;
             color: #00cc00; }
+            @media (min-width: 600px) {
+              footer .main-menu .menu-main-menu-container #menu-main-menu li a {
+                font-size: 2vmin;
+                font-weight: 500; } }
         footer .main-menu .menu-main-menu-container #menu-main-menu li:nth-child(2),
         footer .main-menu .menu-main-menu-container #menu-main-menu li:nth-child(3) {
           padding-left: 3vw; }
         footer .main-menu .menu-main-menu-container #menu-main-menu li:nth-child(3) {
           border: none; }
+          @media (min-width: 600px) {
+            footer .main-menu .menu-main-menu-container #menu-main-menu li:nth-child(3) {
+              border-right: 1px solid #ffffff;
+              margin-right: 3vw; } }
   footer .footer-text-container {
-    font-size: 4.5vmin;
-    margin-top: 1.5em; }
+    width: 100%; }
+    @media (min-width: 600px) {
+      footer .footer-text-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: auto;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; } }
     footer .footer-text-container * {
       font-size: 4.5vmin;
       line-height: 1; }
+      @media (min-width: 600px) {
+        footer .footer-text-container * {
+          font-size: 2vmin;
+          margin-right: 0.5em; } }
 
 .home-content .home-content-container .the-quote {
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-  font-size: 1px; }
+  margin-bottom: 1.5rem; }
+  .home-content .home-content-container .the-quote > p {
+    font-weight: 500;
+    font-size: 1rem; }
+    @media (min-width: 600px) {
+      .home-content .home-content-container .the-quote > p {
+        font-size: 4vmin; } }
 
 .home-content .home-content-container .the-author {
   margin-bottom: 3rem; }
+  @media (min-width: 600px) {
+    .home-content .home-content-container .the-author {
+      font-size: 4vmin; } }
+  @media (min-width: 600px) {
+    .home-content .home-content-container .the-author > * {
+      font-size: 4vmin; } }
 
 .home-content .home-content-container .random-quote {
   color: #00cc00;
@@ -182,6 +238,11 @@ footer {
   padding: 0.5em 1.5rem;
   border-radius: 3px;
   font-weight: 500; }
+  @media (min-width: 600px) {
+    .home-content .home-content-container .random-quote {
+      padding: 0.5em 1.75em;
+      font-size: 3vmin;
+      border: 3px solid #00cc00; } }
 
 .about-content {
   width: 100%; }
@@ -189,10 +250,19 @@ footer {
     font-size: 1.75rem;
     font-weight: 500;
     margin-bottom: 1.5rem; }
+    @media (min-width: 600px) {
+      .about-content .about-content-container h2 {
+        font-size: 4.5vmin; } }
   .about-content .about-content-container > p:first-of-type {
     margin-bottom: 1.5rem; }
+    @media (min-width: 600px) {
+      .about-content .about-content-container > p:first-of-type {
+        margin-bottom: 3rem; } }
   .about-content .about-content-container p {
     font-size: 0.75rem; }
+    @media (min-width: 600px) {
+      .about-content .about-content-container p {
+        font-size: 2.5vmin; } }
     .about-content .about-content-container p a {
       font-size: 1em; }
 
@@ -200,6 +270,9 @@ footer {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1.5rem; }
+  @media (min-width: 600px) {
+    .search-results-content .search-results-content-container p:first-child {
+      font-size: 4.5vmin; } }
 
 .search-results-content .search-results-content-container h2:first-of-type {
   border-top: 1px dashed #ffffff;
@@ -210,33 +283,54 @@ footer {
   font-size: 0.75rem;
   font-weight: 500;
   margin-bottom: 1.5rem; }
+  @media (min-width: 600px) {
+    .search-results-content .search-results-content-container p {
+      font-size: 2.25vmin; } }
 
 .search-results-content .search-results-content-container h2 {
   margin-bottom: 1.5rem; }
   .search-results-content .search-results-content-container h2 a {
     font-size: 1.25rem;
     font-weight: 500; }
+    @media (min-width: 600px) {
+      .search-results-content .search-results-content-container h2 a {
+        font-size: 3.25vmin; } }
 
 .search-results-content .search-results-content-container nav.number-pagination > * {
   padding-right: 0.5em;
   font-size: 0.75rem;
   font-weight: 500; }
+  @media (min-width: 600px) {
+    .search-results-content .search-results-content-container nav.number-pagination > * {
+      font-size: 2.5vmin; } }
 
 .archive-content {
   width: 100%; }
+  @media (min-width: 600px) {
+    .archive-content .archive-content-container * {
+      line-height: 2; } }
   .archive-content .archive-content-container h2 {
     font-size: 1.75rem;
     font-weight: 500;
     margin-bottom: 1.5rem; }
+    @media (min-width: 600px) {
+      .archive-content .archive-content-container h2 {
+        font-size: 4.5vmin; } }
   .archive-content .archive-content-container a {
     display: inline-block;
     font-size: 0.75rem;
     padding-right: 1em;
     letter-spacing: 0.05em; }
+    @media (min-width: 600px) {
+      .archive-content .archive-content-container a {
+        font-size: 2.5vmin; } }
   .archive-content .archive-content-container .archive-headings {
     font-size: 1.25rem;
     font-weight: 500;
     margin-bottom: 1rem; }
+    @media (min-width: 600px) {
+      .archive-content .archive-content-container .archive-headings {
+        font-size: 3.5vmin; } }
   .archive-content .archive-content-container .quote-authors-container {
     margin-bottom: 1.5rem; }
   .archive-content .archive-content-container aside {
@@ -255,6 +349,9 @@ footer {
             justify-content: flex-start; }
   .archive-content .archive-content-container .tag_cloud-2 .tagcloud .tag-cloud-link {
     font-size: 0.75rem !important; }
+    @media (min-width: 600px) {
+      .archive-content .archive-content-container .tag_cloud-2 .tagcloud .tag-cloud-link {
+        font-size: 2.5vmin !important; } }
 
 .submit {
   width: 100%; }
@@ -264,11 +361,17 @@ footer {
       font-size: 1.75rem;
       font-weight: 500;
       margin-bottom: 1.5rem; }
+      @media (min-width: 600px) {
+        .submit .submit-content-container h2 {
+          font-size: 4.5vmin; } }
     .submit .submit-content-container form label {
       display: inline-block;
       font-size: 0.75rem;
       font-weight: 500;
       margin-bottom: 1em; }
+      @media (min-width: 600px) {
+        .submit .submit-content-container form label {
+          font-size: 2.5vmin; } }
     .submit .submit-content-container form input {
       display: inline-block;
       width: 66%;
@@ -277,6 +380,12 @@ footer {
       margin-bottom: 1rem;
       border: 1.5px solid #00cc00;
       border-radius: 3px; }
+      @media (min-width: 600px) {
+        .submit .submit-content-container form input {
+          border: 3px solid #00cc00;
+          font-size: 2.5vmin;
+          padding: 0.5em 0;
+          margin-bottom: 2rem; } }
     .submit .submit-content-container form > input:last-child {
       color: #00cc00;
       padding: 0.5em 1.5rem;
@@ -284,6 +393,10 @@ footer {
       font-weight: 500;
       width: 45%;
       margin-bottom: 0; }
+      @media (min-width: 600px) {
+        .submit .submit-content-container form > input:last-child {
+          font-size: 2.5vmin;
+          padding: 0.5em 0.25em; } }
     .submit .submit-content-container form textarea {
       display: inline-block;
       width: 100%;
@@ -294,10 +407,18 @@ footer {
       margin-bottom: 1rem;
       border: 1.5px solid #00cc00;
       border-radius: 3px; }
+      @media (min-width: 600px) {
+        .submit .submit-content-container form textarea {
+          height: 10em;
+          border: 3px solid #00cc00; } }
     .submit .submit-content-container a,
     .submit .submit-content-container p {
       font-size: 0.75rem;
       margin-bottom: 1.5rem; }
+      @media (min-width: 600px) {
+        .submit .submit-content-container a,
+        .submit .submit-content-container p {
+          font-size: 2.5vmin; } }
 
 .not-found {
   width: 100%; }
@@ -307,9 +428,16 @@ footer {
       font-size: 1.75rem;
       font-weight: 500;
       margin-bottom: 1.5rem; }
+      @media (min-width: 600px) {
+        .not-found .not-found-content-container h2 {
+          font-size: 4.5vmin; } }
     .not-found .not-found-content-container p {
       font-size: 0.75rem;
       margin-bottom: 1.5rem; }
+      @media (min-width: 600px) {
+        .not-found .not-found-content-container p {
+          font-size: 2.25vmin;
+          font-weight: 500; } }
     .not-found .not-found-content-container .search-container form {
       -webkit-box-sizing: content-box;
               box-sizing: content-box; }
@@ -321,6 +449,11 @@ footer {
       font-size: 0.75rem;
       font-weight: 500;
       padding: 0.5em 0.5em; }
+      @media (min-width: 600px) {
+        .not-found .not-found-content-container .search-container .search-field {
+          font-size: 3vmin;
+          border: 3px solid #00cc00;
+          width: 40%; } }
       .not-found .not-found-content-container .search-container .search-field::-webkit-input-placeholder {
         text-transform: uppercase; }
       .not-found .not-found-content-container .search-container .search-field::-moz-placeholder {
@@ -332,49 +465,92 @@ footer {
     .not-found .not-found-content-container .search-container .search-submit {
       background-color: #222222;
       border: 0; }
+      @media (min-width: 600px) {
+        .not-found .not-found-content-container .search-container .search-submit .fa {
+          font-size: 2.5vmin; } }
       .not-found .not-found-content-container .search-container .search-submit * {
         color: #00cc00; }
 
-.category-content .category-content-container p:first-child {
+.category-content .category-content-container > p:first-child {
   font-size: 1.5rem;
   font-weight: 500;
   padding-bottom: 1.5rem;
   border-bottom: 1px dashed #ffffff; }
+  @media (min-width: 600px) {
+    .category-content .category-content-container > p:first-child {
+      font-size: 4.5vmin; } }
 
-.category-content .category-content-container p {
+.category-content .category-content-container > p {
   font-size: 1rem;
   margin: 1.5rem 0; }
+  @media (min-width: 600px) {
+    .category-content .category-content-container > p {
+      font-size: 3.75vmin;
+      font-weight: 500;
+      margin: 1em 0; } }
 
 .category-content .category-content-container h2 {
   padding-bottom: 1.5rem;
   border-bottom: 1px dashed #ffffff; }
+  @media (min-width: 600px) {
+    .category-content .category-content-container h2 {
+      font-size: 2.5vmin;
+      font-weight: 500;
+      padding-bottom: 3rem; } }
 
 .category-content .category-content-container h2:last-of-type {
   margin-bottom: 1.5rem; }
+  @media (min-width: 600px) {
+    .category-content .category-content-container h2:last-of-type {
+      margin-bottom: 4.5rem; } }
 
 .category-content .category-content-container nav.number-pagination > * {
   padding-right: 0.5em;
   font-size: 0.75rem;
   font-weight: 500; }
+  @media (min-width: 600px) {
+    .category-content .category-content-container nav.number-pagination > * {
+      font-size: 2.5vmin; } }
 
 .tag-content .tag-content-container > p:first-child {
   font-size: 1.5rem;
   font-weight: 500;
   padding-bottom: 1.5rem;
   border-bottom: 1px dashed #ffffff; }
+  @media (min-width: 600px) {
+    .tag-content .tag-content-container > p:first-child {
+      font-size: 4.5vmin; } }
 
 .tag-content .tag-content-container > p {
   font-size: 1rem;
   margin: 1.5rem 0; }
+  @media (min-width: 600px) {
+    .tag-content .tag-content-container > p {
+      font-size: 3.5vmin;
+      font-weight: 500;
+      margin: 1em 0; } }
 
 .tag-content .tag-content-container h2 {
   margin-bottom: 1.5rem; }
+  @media (min-width: 600px) {
+    .tag-content .tag-content-container h2 p {
+      font-size: 3.75vmin; } }
 
 .tag-content .tag-content-container h2 + p {
   padding-bottom: 1.5rem;
   border-bottom: 1px dashed #ffffff; }
+  @media (min-width: 600px) {
+    .tag-content .tag-content-container h2 + p {
+      padding-bottom: 3rem;
+      font-size: 2.5vmin; } }
+  @media (min-width: 600px) {
+    .tag-content .tag-content-container h2 + p a {
+      font-size: 2.5vmin; } }
 
 .tag-content .tag-content-container nav.number-pagination > * {
   padding-right: 0.5em;
   font-size: 0.75rem;
   font-weight: 500; }
+  @media (min-width: 600px) {
+    .tag-content .tag-content-container nav.number-pagination > * {
+      font-size: 2.5vmin; } }

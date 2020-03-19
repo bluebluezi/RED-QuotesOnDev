@@ -6,20 +6,43 @@
             font-weight:500;
             padding-bottom:$base-spacing-unit;
             border-bottom:$border-dashed;
+            @include tablet{
+                font-size: 4.5vmin;
+            }
         }
 
         &>p{
             font-size:1rem;
             margin: $base-spacing-unit 0;
+            @include tablet{
+                font-size: 3.5vmin;
+                font-weight:500;
+                margin: 1em 0;
+            }
         }
 
         h2{
             margin-bottom:$base-spacing-unit;
+
+            p{
+                @include tablet{
+                    font-size: 3.75vmin;
+                }
+            }
         }
 
-        h2 +p {
+        h2+p {
             padding-bottom: $base-spacing-unit;
             border-bottom: $border-dashed;
+            @include tablet{
+                padding-bottom: 3rem;
+                font-size: 2.5vmin;
+            }
+            a{
+                @include tablet{
+                    font-size: 2.5vmin;
+                }
+            }
         }
 
         nav.number-pagination{
@@ -28,6 +51,9 @@
                 padding-right: 0.5em;
                 font-size:0.75rem;
                 font-weight:500;
+                @include tablet{
+                    font-size: 2.5vmin;
+                }
             }
         }
     }
